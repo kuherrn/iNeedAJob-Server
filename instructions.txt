@@ -1,5 +1,11 @@
-Git command
+// Git commands //
+git init (only do this once to create a local repository)
+git add . (add all files to this commit)
+git commit -m "descriptive message here"
+git remote add origin https://github.com/[username]/repositoryname  (only do this once - when you have just created a new repository)
+git push origin main
 
+// Initial Angular commands //
 npm i express -y
 npm i mongoose dotenv express body-parser
 add .gitignore file
@@ -13,3 +19,12 @@ create 2 folders
         ng generate service employer
 place Bootstrap CDN into index.html file
 remove and delete css file definition from components 
+
+ng build -> creates the dist folder
+copy/paste the contents of the dist folder into a NEW public folder in client folder
+set the process.env
+set the static path to the public folder; direct all http requests to index.html
+add the start script in package.json
+
+// Configuring Angular to run on localhost and Render //
+add "filereplacements" after "outputHashing" in angular.json to specify angular to use prod environment in production

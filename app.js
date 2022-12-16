@@ -31,6 +31,13 @@ app.use(cors({
 const employers = require('./controllers/employers')
 app.use('/api/employers', employers)
 
+// set the static path to the public folder; direct all http requests to index.html
+app.use(express.static(__dirname + '/public'))
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html')
+})
+
 // start express web server & make public
-app.listen(3000)
+const port = process.env.PORT || 3000
+app.listen(port)
 module.exports = app
