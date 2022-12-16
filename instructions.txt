@@ -1,0 +1,15 @@
+Git command
+
+npm i express -y
+npm i mongoose dotenv express body-parser
+add .gitignore file
+cd ..
+ng new iNeedAJob (no need routing)
+ng serve --open
+create 2 folders
+    app/components
+        ng generate component employer
+    app/services
+        ng generate service employer
+place Bootstrap CDN into index.html file
+remove and delete css file definition from components 
